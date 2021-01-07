@@ -1,0 +1,501 @@
+*{
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+input:focus{
+outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+.nav{
+    height: 100vh;
+    width: 7%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.kof{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.burger{
+    height: 35px;
+    width: 30px;
+    padding: 5px;
+}
+
+.line{
+    background-color: rgb(0, 0, 0);
+    height: 2px;
+    width: 85%;
+    margin: 5px auto;
+}
+
+.nav > i{
+    font-size: 18px;
+}
+
+/* .genderbox{
+    transform: rotate(-90deg);
+    color: rgb(0, 0, 0);
+    height: 100px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: .2s;
+} */
+
+.gender{
+    transform: rotate(-90deg);
+}
+
+.gender:hover::after{
+    display: block;
+    height: 2px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+.gender{
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.navline{
+    background-color: black;
+    width: 30%;
+    height: 2px;
+    transform: rotate(-90deg);
+}
+/* 
+.login,.signup{
+    height: 40px;
+    width: 70%;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.login{
+    background-color: turquoise;
+    color: white;
+} */
+
+.wrap{
+    height: 100vh;
+    width: 93%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+.icons, .random{
+    display: flex;
+    position:fixed;
+    list-style: none;
+}
+
+.icons{
+    bottom: 2%;
+    right: 2%;
+    z-index: 1;
+}
+
+.random{
+    z-index: 10;
+    bottom: 50%;
+    right: -1%;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
+
+.random > li{
+    margin: 0 10px;
+    font-size: 14px;
+    color: lightgrey;
+}
+
+.icons > li > i{
+    font-size: 20px;
+    margin: 0 8px;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.wrap::-webkit-scrollbar{
+    background-color: transparent;
+
+}
+
+.shoppingcart{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    background-color: rgb(241, 241, 241);
+    height: 25px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.herosection{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:5em auto 10em;
+    position: relative;
+}
+
+.herotextdiv{
+    width: 17%;
+    height: 87vh;
+    transform: translateX(10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    z-index: 10;
+}
+
+.number{
+    color: rgb(41, 41, 41);
+    position: absolute;
+    left: 2%;
+    top: -15%;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.herotext{
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 6vw;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2em;
+    
+}
+
+.shopnow{
+    margin: 2em 0;
+    height: 65px;
+    width: 95%;
+    border: 2px solid rgb(41, 41, 41);
+    background-color: transparent;
+    color: rgb(167, 167, 167);
+    text-transform: uppercase;
+}
+
+.heroimagediv{
+    height: 44vw;
+    width: 44vw;
+    border-radius: 50%;
+    background-color: violet;
+    transform: translateX(-1%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.circleimg{
+    height: 27vw;
+    width: 27vw;
+    background-color: turquoise;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.heroimage{
+    height: 14vw;
+    width: 22vw;
+    transform: rotate(-25deg);
+}
+
+.pricebox{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    text-transform: uppercase;
+}
+
+.small{
+    background-color: white;
+    color: black;
+    height: 55px;
+    width: 90%;
+    border: none;
+    text-transform: uppercase;
+}
+
+.shopmenandwomen {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 30em auto;
+}
+
+.scroller{
+    background-color: rgb(134, 134, 134);
+    height: 90%;
+    width: 97%;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.scroller::-webkit-scrollbar{
+    background-color: black;
+}
+.stuffwrap{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.stuffimg{
+    height: 31vw;
+    width: 28vw;
+}
+
+.buydiv{
+    height: 20vw;
+    width: 20vw;
+    transform: translateY(40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.jacket{
+    text-transform: capitalize;
+    font-size: 1.8vw;
+
+}
+
+.colors{
+    display: flex;
+    list-style: none;
+}
+
+.color1, .color2, .color3{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+}
+
+.color1{
+    background-color: magenta;
+}
+
+.color2{
+    background-color: black;
+}
+
+.color3{
+    background-color: white;
+}
+
+.pricing{
+    font-weight: 300;
+}
+
+.buybuttonbox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.save,.addto{
+    height: 5.5vw;
+    width: 17vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.save{
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.addto{
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.buttondiv{
+position: absolute;
+display: flex;
+bottom: 20%;
+left: 10%;
+border: 2px solid black;
+}
+
+.find,.find2{
+    height: 55px;
+    width: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    letter-spacing: 2px;
+    transition: ease-in-out .2s;
+}
+
+.find{
+    background-color: black;
+    color: white;
+
+}
+
+.find:hover{
+    opacity: .8;
+
+}
+
+.find2{
+    background-color: transparent;
+}
+
+.find2:hover{
+    opacity: .8;
+}
+
+
+.latest{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    margin: 20em auto;
+    position: relative;
+}
+
+.left{
+    height: 70%;
+    width: 30%;
+    background-color: blue;
+    border-radius: 0px 120px 0px 120px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.get{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    font-size: 5vw;
+    text-transform: capitalize;
+    z-index: 1  ;
+    color: white;
+}
+
+.shoewrap{
+    height: 27vw;
+    width: 27vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightsalmon;
+    border-radius: 50%;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    z-index: 1;
+    transform: rotate(25deg);
+    transition: .3s ;
+}
+
+.shoewrap:hover{
+    transform: scale(1.2);
+}
+
+.womensshoe{
+    height: 15vw;
+    width: 17vw;
+    transition: .3s ease-in-out;
+}
+
+
+.right{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textwrap{
+    width: 50%;
+    text-align: right;
+    transform: translateX(10%);
+}
+
+.womensshoetitle{
+    color: white;
+    font-size: 7vw;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.shoetext{
+    font-size: 1.5vw;
+    color:rgb(134, 134, 134);
+}
+
+.shopshoes{
+    margin: 2em auto;
+    height: 65px;
+    width: 70%;
+    background-color: transparent;
+    border: 2px solid rgb(41, 41, 41);
+    color: white;
+    text-transform: uppercase;
+    transition: ease-in-out .2s;
+}
+
+.shopshoes:hover{
+background-color: white;
+color: black;
+border: none;
+}
