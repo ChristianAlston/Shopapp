@@ -71,9 +71,43 @@ button:hover{
     transform: rotate(-45deg)translate(20%, -85%);
 }
 
-.nav > i{
+.searchinputbox{
+    position: relative;
+}
+
+.searchinputbox > i{
     font-size: 18px;
 }
+
+.expandedinput{
+    height:35px;
+    opacity: 0;
+    width: 0;   
+    background-color:rgb(167, 167, 167) ;
+    border: lightgrey 1px solid;
+    border-radius: 50px;
+    transition: .3s;
+    position : absolute;
+    left: 0;
+    transform: translate(0, -20%);
+    padding-left: 15px;
+    z-index: 100;
+    font-size: 12px;
+}
+
+.searchinputbox:hover .searchinputbox>i {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.searchinputbox:hover .expandedinput {
+    width: 300px;
+    opacity: 1;
+}
+
+
 
 /* .genderbox{
     transform: rotate(-90deg);
@@ -317,8 +351,22 @@ button:hover{
     color: white;
     border: 2px solid white;
     padding: 8px;
+    opacity: 0;
     border-radius: 50%;
-    transition: .2s
+   animation-delay: 2.5s;
+    animation: top .5s forwards ease;
+}
+
+#icon1 {
+    animation-delay: 2s;
+}
+
+#icon2 {
+    animation-delay: 2.1s;
+}
+
+#icon3 {
+    animation-delay: 2.2s;
 }
 
 .icons>li>i:hover{
@@ -344,6 +392,9 @@ button:hover{
     padding: 10px;
     border-radius: 20px;
     z-index: 10;
+    opacity: 0;
+    animation: appear .5s ease forwards;
+    animation-delay: 3s;
 }
 
 .herosection{
@@ -357,7 +408,7 @@ button:hover{
 }
 
 .herotextdiv{
-    width: 17%;
+    width: 24%;
     height: 87vh;
     transform: translateX(10%);
     display: flex;
@@ -386,7 +437,41 @@ button:hover{
     
 }
 
+
+.herospan{
+    animation: .5s ease forwards appear;
+    opacity: 0;
+}
+
+#span1{
+    animation-delay: .7s;
+}
+#span2 {
+    animation-delay: .8s;
+}
+#span3{
+    animation-delay: .9s;
+}
+#span4{
+    animation-delay: 1s;
+}
+
+@keyframes top{
+    0%{
+        transform: translate(0, 20%);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0 , -20%);
+    }
+}
+
 .shopnow{
+    animation: .5s ease forwards top;
+    animation-delay: 1.4s;
+    opacity: 0;
     margin: 2em 0;
     height: 65px;
     width: 95%;
@@ -408,6 +493,7 @@ button:hover{
     z-index: 0;
     transition: .3s ease-in-out;
 }
+
 
 .circleimg{
     height: 27vw;
