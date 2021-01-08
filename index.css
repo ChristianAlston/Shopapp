@@ -69,11 +69,12 @@ button:hover{
 
 .gender{
     transform: rotate(-90deg);
+    padding: 3px;
 }
 
 .gender::before{
     display: block;
-    height: 2px;
+    height: 1px;
     width: 100%;
     content: '';
     position: absolute;
@@ -156,6 +157,12 @@ button:hover{
     border: 2px solid white;
     padding: 8px;
     border-radius: 50%;
+    transition: .2s
+}
+
+.icons>li>i:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .wrap::-webkit-scrollbar{
