@@ -34,4 +34,3 @@ burger.addEventListener( "click", () => {
         link.classList.toggle( 'appear' )
     } )
 } )
-
