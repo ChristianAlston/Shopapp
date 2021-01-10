@@ -37,9 +37,41 @@ button:hover{
     }
 }
 
+@keyframes disappear{
+    0% {
+        opacity: 0;
+    }
+    50%{
+         opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 
+@keyframes a {
+    from {
+        opacity: 0;
+        transform: translate(0, 20%);
+    }
 
+    to {
+        opacity: 1;
+        transform: translate(0, -20%);
+    }
+}
 
+@keyframes growup{
+    0% {
+        transform: translate(0 );
+        opacity: 0;
+      }
+
+    100%{
+        transform: translate(0) skewY(1);
+        opacity: 1;
+    }
+}
 
 .intro{
     height: 100vh;
@@ -53,17 +85,47 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: goUp 1.5s ease-in-out forwards;
-    animation-delay: 2.5s;
+    animation: goUp 1.5s cubic-bezier(.97, .01, .36, .99) 2.8s forwards;
 }
 
 .intro > h1{
-    font-size: 6.5vw;
+    font-size: 5.5vw;
     color: transparent;
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     text-transform: uppercase;
 }
 
+.kof1,
+.kof3,
+.kof5,
+.kof7,
+.kof2,
+.kof4,
+.kof6 {
+    animation: .3s forwards disappear;
+}
+
+.kof1{
+    animation-delay: 2.5s;
+}
+.kof2 {
+    animation-delay: 2.9s;
+}
+.kof3 {
+    animation-delay: 2.6s;
+}
+.kof4 {
+    animation-delay: 2.3s;
+}
+.kof5 {
+    animation-delay: 2.8s;
+}
+.kof6 {
+    animation-delay: 2.5s;
+}
+.kof7 {
+    animation-delay: 2.9s;
+}
 .up,.up2,.up3,.lefttoright{
     position: fixed;
     display: flex;
@@ -80,8 +142,7 @@ button:hover{
     
     background-color: turquoise;
     z-index: 1000000000;
-    animation: goUp 1s ease-in-out forwards;
-    animation-delay: 1s;
+    animation: goUp 2s cubic-bezier(.97,.01,.36,.99) .8s forwards;
 }
 
 .mainkof{
@@ -92,15 +153,15 @@ button:hover{
 .up2{
     z-index: 100000000;
     background-color: black;
-    animation: goUp 1.2s ease-in-out forwards;
-    animation-delay: 1.2s;
+    animation: goUp 1.2s cubic-bezier(.97, .01, .36, .99) .8s forwards;
+    animation-delay: 1.6s;
 }
 
 .up3{
     z-index: 10000000;
     background-color: rgb(247, 0, 255);
-    animation: goUp 1.2s ease-in-out forwards;
-    animation-delay: 1.4s;
+    animation: goUp 1.2s cubic-bezier(.97, .01, .36, .99) .8s forwards;
+    animation-delay: 1.9s;
 }
 
 
@@ -115,8 +176,12 @@ button:hover{
 }
 
 .kof{
+    opacity: 0;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
+    animation: a .4s ease-in-out forwards;
+    animation-delay: 3.9s;
+    animation: a .5s cubic-bezier(.97, .01, .36, .99) 7s forwards;
 }
 
 .burger{
@@ -250,7 +315,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 .open{
@@ -273,18 +338,6 @@ button:hover{
     100% {
         transform: translate(0, -25%);
         opacity: 1;
-    }
-}
-
-@keyframes a {
-    from{
-        opacity: 0;
-        transform: translate(0, 20%);
-    }
-
-    to{
-       opacity: 1;
-       transform: translate(0, -20%);
     }
 }
 
@@ -436,20 +489,19 @@ button:hover{
     padding: 8px;
     opacity: 0;
     border-radius: 50%;
-   animation-delay: 2.5s;
     animation: top .5s forwards ease;
 }
 
 #icon1 {
-    animation-delay: 3.2s;
+    animation-delay: 4.2s;
 }
 
 #icon2 {
-    animation-delay: 3.3s;
+    animation-delay: 4.3s;
 }
 
 #icon3 {
-    animation-delay: 3.4s;
+    animation-delay: 4.4s;
 }
 
 .icons>li>i:hover{
@@ -477,7 +529,7 @@ button:hover{
     z-index: 10;
     opacity: 0;
     animation: appear .5s ease forwards;
-    animation-delay: 4s;
+    animation-delay: 8s;
 }
 
 .herosection{
@@ -541,13 +593,25 @@ button:hover{
 
 @keyframes top{
     0%{
-        transform: translate(0, 20%);
+        transform: translate(0, -20%);
         opacity: 0;
     }
 
     100%{
         opacity: 1;
-        transform: translate(0 , -20%);
+        transform: translate(0 , 0%) ;
+    }
+}
+
+@keyframes down {
+    0% {
+        transform: translate(0, 20%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0%);
     }
 }
 
@@ -564,6 +628,7 @@ button:hover{
     text-transform: uppercase;
 }
 
+
 .heroimagediv{
     height: 44vw;
     width: 44vw;
@@ -572,10 +637,12 @@ button:hover{
     background: linear-gradient(346deg, rgba(255, 118, 199, 1) 0%, rgba(154, 0, 255, 1) 100%);
     transform: translateX(-1%);
     display: flex;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     z-index: 0;
     transition: .3s ease-in-out;
+    animation: top 1.5s cubic-bezier(.97, .01, .36, .99) 3.8s forwards;
 }
 
 
@@ -587,6 +654,8 @@ button:hover{
     display: flex;
     align-items: center;
     position: relative;
+    opacity: 0;
+    animation: down 1.5s cubic-bezier(.97, .01, .36, .99) 4.8s forwards;
 }
 
 .heroimage{
@@ -594,6 +663,8 @@ button:hover{
     width: 22vw;
     transform: rotate(-25deg);
     transition: ease-in-out .4s;
+    opacity: 0;
+    animation: top 1.5s cubic-bezier(.97, .01, .36, .99) 5.5s forwards;
 }
 
 .heroimagediv:hover {
@@ -611,6 +682,8 @@ button:hover{
     bottom: 5%;
     right: 15%;
     text-transform: uppercase;
+    opacity: 0;
+    animation: down 1.5s cubic-bezier(.97, .01, .36, .99) 6s forwards;
 }
 
 .small{
@@ -710,8 +783,8 @@ button:hover{
     width: 17vw;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
+    letter-spacing: 1px;
+    font-size: 11px;
     margin: 10px 0;
 }
 
