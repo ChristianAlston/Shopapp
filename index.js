@@ -53,16 +53,16 @@ const full2 = document.querySelector( '.full2' )
 const full3 = document.querySelector( '.full3' )
 
 const fullscreen = () => {
-    full.classList.toggle( 'fullscreen' )
+    full.classList.add( 'fullscreen' )
 
 }
 
 const fullscreen2 = () => {
-    full2.classList.toggle( 'fullscreen' )
+    full2.classList.add( 'fullscreen' )
 }
 
 const fullscreen3 = () => {
-    full3.classList.toggle( 'fullscreen' )
+    full3.classList.add( 'fullscreen' )
 }
 
 nike1.addEventListener( "click", () => {
@@ -77,8 +77,22 @@ nike3.addEventListener( "click", () => {
     fullscreen3()
 } )
 
-document.addEventListener( "click", ( e ) => {
+window.addEventListener( "click", ( e ) => {
     if ( e.target == full ) {
         full.classList.remove( 'fullscreen' )
+    } else if ( e.target == full2 ) {
+        full2.classList.remove( 'fullscreen' )
+    } else if ( e.target == full3 ) {
+        full3.classList.remove( 'fullscreen' )
     }
+} )
+
+const closeButton = document.querySelectorAll( '.close' )
+
+closeButton.forEach( ( button ) => {
+    button.addEventListener( "click", () => {
+        full.classList.remove( 'fullscreen' )
+        full2.classList.remove( 'fullscreen' )
+        full3.classList.remove( 'fullscreen' )
+    } )
 } )
