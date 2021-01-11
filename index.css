@@ -11,6 +11,10 @@ body{
     justify-content: space-between;
 }
 
+img:hover{
+   cursor: pointer;
+}
+
 a{
     text-decoration: none;
 }
@@ -1240,7 +1244,55 @@ border: none;
     width: 35vw;
     border-radius: 50%;
     transform: translate(-20%, 0);
+   
 }
+
+.close{
+    position: absolute;
+    left: 90%;
+    top: 2%;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 1000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    animation: top .5s cubic-bezier(.97, .01, .36, .99) 2s forwards;
+}
+
+.close:hover{
+    background-color: rgb(68, 68, 68);
+    cursor: pointer;
+}
+/* 
+.close:hover .slant1{
+    background-color: black;
+}
+
+.close:hover .slant2{
+    background-color: black;
+} */
+
+.slant1,.slant2{
+    height: 2px;
+    width: 70%;
+    background-color: white;
+    /* transition: .2s ease-in-out; */
+}
+
+.slant1{
+    transform: rotate(45deg);
+}
+
+.slant2{
+    transform: rotate(-45deg);
+}
+
 
 .productimage1,
 .productimage2,
@@ -1249,10 +1301,23 @@ border: none;
     height: 20vw;
     width: 17vw;
     z-index: 10;
+   transition: .3s cubic-bezier(.97, .01, .36, .99) ;
+}
+
+.productimage1:hover{
+    transform: scale(1.1);
+}
+
+.productimage2:hover{
+    transform: scale(1.1);
+}
+
+.productimage3:hover {
+    transform: scale(1.1);
 }
 
 .full,.full2,.full3 {
-    height: 90vh;
+    height: 100vh;
     width: 0%;
     background-color: rgb(255, 255, 255);
     display: none;
