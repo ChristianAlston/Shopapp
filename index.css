@@ -1065,7 +1065,7 @@ border: none;
 .imagewrapper:hover .imagetext{
     visibility: visible;
     opacity: 1;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 .imagewrapper:hover .whitetext{
@@ -1082,7 +1082,7 @@ border: none;
 .imagewrapper2:hover .imagetext {
     visibility: visible;
     opacity: 1;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 .imagewrapper2:hover .whitetext {
@@ -1099,7 +1099,7 @@ border: none;
 .imagewrapper3:hover .imagetext {
     visibility: visible;
     opacity: 1;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 .imagewrapper3:hover .whitetext {
@@ -1116,7 +1116,7 @@ border: none;
 .imagewrapper4:hover .imagetext {
     visibility: visible;
     opacity: 1;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 .imagewrapper4:hover .whitetext {
@@ -1237,6 +1237,8 @@ border: none;
     position: relative;
 }
 
+
+
 .backgroundobject{
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -1244,7 +1246,6 @@ border: none;
     width: 35vw;
     border-radius: 50%;
     transform: translate(-20%, 0);
-   
 }
 
 .close{
@@ -1261,13 +1262,14 @@ border: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: .2s ease-in-out;
+    transition: .2s ease-in-out ;
     animation: top .5s cubic-bezier(.97, .01, .36, .99) 2s forwards;
 }
 
 .close:hover{
     background-color: rgb(68, 68, 68);
     cursor: pointer;
+    transform: scale(1.2);
 }
 /* 
 .close:hover .slant1{
@@ -1415,3 +1417,4 @@ border: none;
     width: 70%;
     font-weight: bold;
 }
+
