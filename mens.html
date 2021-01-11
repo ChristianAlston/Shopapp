@@ -24,7 +24,7 @@
     <title>shoestore.com</title>
   </head>
   <body>
-    <div class="up"></div>
+    <div class="lefttoright"></div>
 
     <div class="nav">
       <h2 class="kof">kof</h2>
@@ -57,12 +57,23 @@
         </ul>
       </div>
       <ul class="navscreenlinks">
-        <li class="link" id="link1">home</li>
-        <li class="link" id="link2">men's</li>
-        <li class="link" id="link3">women's</li>
-        <li class="link" id="link4">kid's</li>
-        <li class="link" id="link5">my favorites</li>
-        <li class="link" id="link6">my cart ( 0 )</li>
+        <a href="index.html"> <li class="link" id="link1">home</li> </a>
+
+        <a href="mens.html"><li class="link" id="link2">men's wear</li> </a>
+
+        <a href="womens.html">
+          <li class="link" id="link3">women's wear</li>
+        </a>
+
+        <a href="kids.html"> <li class="link" id="link4">kid's wear</li> </a>
+
+        <a href="favorites.html">
+          <li class="link" id="link5">my favorites</li>
+        </a>
+
+        <a href="shoppingcart.html"
+          ><li class="link" id="link6">my cart ( 0 )</li>
+        </a>
       </ul>
     </div>
 
@@ -83,6 +94,117 @@
         <li>ca</li>
         <li>sc</li>
       </ul>
+
+      <div class="shoppingwrapper">
+        <ul class="shoppingoptionslist">
+          <a href="mens.html"> <li>mens</li></a>
+          <a href="womens.html"> <li>womens</li></a>
+          <a href="kids.html"> <li>kids</li></a>
+          <div class="kofdiv">
+            <h1 class="kof">kof</h1>
+          </div>
+        </ul>
+
+        <div class="productswrapper">
+          <h1 class="typeof">men's clothing</h1>
+          <div class="innerwrapper">
+            <div class="full">
+              <img
+                src="/Images/mensnikejacket1.jpg"
+                alt=""
+                class="productimage1fullscreen"
+              />
+            </div>
+            <div class="full2">
+              <img
+                src="/Images/mensnikejacket2.jpg"
+                alt=""
+                class="productimage1fullscreen2"
+              />
+            </div>
+            <div class="full3">
+              <img
+                src="/Images/mensnikejacket3.jpg"
+                alt=""
+                class="productimage1fullscreen3"
+              />
+            </div>
+            <div class="products">
+              <div class="product">
+                <div class="backgroundobject">
+                  <img
+                    src="/Images/mensnikejacket1.jpg"
+                    alt=""
+                    class="productimage1"
+                  />
+
+                  <img
+                    src="/Images/mensnikejacket2.jpg"
+                    alt=""
+                    class="productimage2"
+                  />
+                  <img
+                    src="/Images/mensnikejacket3.jpg"
+                    alt=""
+                    class="productimage3"
+                  />
+                </div>
+              </div>
+              <div class="product">
+                <div class="backgroundobject"></div>
+                <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
+              </div>
+              <div class="product">
+                <div class="backgroundobject"></div>
+                <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
+              </div>
+              <div class="product">
+                <div class="backgroundobject"></div>
+                <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="bottomscroller">
+              <div class="slidenav">
+                <div class="slidecircle"></div>
+                <div class="slidecircle"></div>
+                <div class="slidecircle"></div>
+                <div class="slidecircle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="productsdescription">
+            <h2 class="typeofproduct">men's jacket nike boost</h2>
+            <p class="price">$400.99</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              cumque rerum enim impedit? Possimus assumenda molestiae nulla
+              delectus autem earum reprehenderit eveniet. Magnam enim, suscipit
+              quasi laboriosam cupiditate eligendi vero?
+            </p>
+            <div class="colors">
+              <div class="color1"></div>
+              <div class="color2"></div>
+              <div class="color3"></div>
+              <div class="color4"></div>
+            </div>
+            <div class="buttonwrap">
+              <button class="save">
+                add to wishlist
+                <span class="icon"><i class="fas fa-heart"></i></span>
+              </button>
+              <button class="addto">add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
